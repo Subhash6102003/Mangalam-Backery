@@ -21,25 +21,6 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-lg">
-      {/* Top Bar */}
-      <div className="bg-gradient-to-r from-valentine-red to-valentine-pink text-white py-2">
-        <div className="container mx-auto px-4 flex justify-between items-center text-sm">
-          <div className="flex items-center gap-4">
-            <a href="tel:+919876543210" className="flex items-center gap-1 hover:text-valentine-gold">
-              <Phone size={14} />
-              <span>+91-9876543210</span>
-            </a>
-            <span className="hidden md:flex items-center gap-1">
-              <MapPin size={14} />
-              MP Nagar, Bhopal
-            </span>
-          </div>
-          <div className="text-xs md:text-sm font-semibold animate-pulse">
-            ❤️ Valentine Week Special: Get 20% OFF on All Orders!
-          </div>
-        </div>
-      </div>
-
       {/* Main Header */}
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
