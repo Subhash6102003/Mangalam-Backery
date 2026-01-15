@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  basePath: '/Mangalam-Backery',
   images: {
-    domains: ['images.unsplash.com', 'res.cloudinary.com'],
-    formats: ['image/webp', 'image/avif'],
+    unoptimized: true, // Required for static export
   },
   compress: true,
   poweredByHeader: false,
