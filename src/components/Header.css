@@ -1,0 +1,261 @@
+.header {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-top {
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #c41e3a;
+  font-weight: bold;
+  font-size: 18px;
+  min-width: fit-content;
+}
+
+.logo-icon {
+  font-size: 28px;
+}
+
+.location-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #666;
+  white-space: nowrap;
+}
+
+.search-bar {
+  display: flex;
+  flex: 1;
+  max-width: 400px;
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  padding: 0 16px;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  padding: 0 16px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.cart-icon {
+  position: relative;
+  font-size: 24px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.cart-icon:hover {
+  transform: scale(1.1);
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #c41e3a;
+  color: white;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Navigation Bar */
+.navbar {
+  background-color: #f5f5f5;
+  padding: 0;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 12px 20px;
+  flex-wrap: wrap;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s;
+  padding: 8px 0;
+}
+
+.nav-item:hover {
+  color: #c41e3a;
+}
+
+.nav-item.highlight {
+  color: #c41e3a;
+  border: 1px solid #c41e3a;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.nav-item.highlight:hover {
+  background-color: #c41e3a;
+  color: white;
+}
+
+.mega-menu-trigger {
+  position: relative;
+  cursor: pointer;
+}
+
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  min-width: 400px;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mega-menu-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.mega-menu-column h4 {
+  color: #c41e3a;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.mega-menu-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mega-menu-column li {
+  margin-bottom: 8px;
+}
+
+.mega-menu-column a {
+  text-decoration: none;
+  color: #666;
+  font-size: 13px;
+  transition: color 0.3s;
+}
+
+.mega-menu-column a:hover {
+  color: #c41e3a;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-content {
+    gap: 10px;
+  }
+
+  .search-bar {
+    display: none;
+  }
+
+  .location-selector {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .navbar.mobile-open {
+    display: block;
+    background: white;
+    border-top: 1px solid #ddd;
+  }
+
+  .nav-items {
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+  }
+
+  .nav-item {
+    width: 100%;
+    padding: 12px 20px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .mega-menu {
+    position: static;
+    border: none;
+    box-shadow: none;
+    background: #f5f5f5;
+    padding: 10px 20px;
+    min-width: unset;
+  }
+}
