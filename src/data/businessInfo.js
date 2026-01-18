@@ -1,9 +1,9 @@
 // Business Information
 export const businessInfo = {
   name: "Mangalam Bakery",
-  phone: "099932 28538",
+  phone: "9993228538",
   address: "5A, Amar Shahid Bhagatsingh Rd, Market, Indrapuri, Bhopal, Madhya Pradesh 462021",
-  whatsapp: "09993228538",
+  whatsapp: "9993228538",
   hours: "Open daily, closes at 12:00 AM",
   city: "Bhopal",
   deliveryArea: "All of Bhopal city",

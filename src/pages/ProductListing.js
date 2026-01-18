@@ -1,17 +1,32 @@
-import React, { useState } from "react";
-import { cakes } from "../data/cakes";
+import React, { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
+import { cakes, cakeCategories } from "../data/cakes";
 import ProductCard from "../components/ProductCard";
 import "./ProductListing.css";
 
 const ProductListing = ({ cartDispatch }) => {
+  const [searchParams] = useSearchParams();
+  const categoryParam = searchParams.get("category");
+  
   const [filteredCakes, setFilteredCakes] = useState(cakes);
-  const [selectedFilter, setSelectedFilter] = useState("all");
+  const [selectedFilter, setSelectedFilter] = useState(categoryParam || "all");
   const [sortBy, setSortBy] = useState("trending");
+
+  // Filter cakes based on category parameter
+  useEffect(() => {
+    if (categoryParam) {
+      setSelectedFilter(categoryParam);
+      handleFilterChange(categoryParam);
+    }
+  }, [categoryParam]);
 
   const filters = [
     { id: "all", label: "All Cakes", count: cakes.length },
+    { id: "theme", label: "Theme Cakes", count: cakes.filter(c => c.category.includes("theme")).length },
+    { id: "premium", label: "Premium Cakes", count: cakes.filter(c => c.category.includes("premium")).length },
+    { id: "chocolate", label: "Chocolate Cakes", count: cakes.filter(c => c.category.includes("chocolate")).length },
+    { id: "fusion", label: "Fusion Cakes", count: cakes.filter(c => c.category.includes("fusion")).length },
     { id: "veg", label: "Veg Cakes", count: cakes.filter(c => c.veg).length },
-    { id: "trending", label: "Trending", count: 8 },
     { id: "underPrice", label: "Under ₹400", count: cakes.filter(c => c.price < 400).length },
   ];
 
@@ -23,6 +38,14 @@ const ProductListing = ({ cartDispatch }) => {
       filtered = cakes.filter(c => c.veg);
     } else if (filterId === "underPrice") {
       filtered = cakes.filter(c => c.price < 400);
+    } else if (filterId === "theme") {
+      filtered = cakes.filter(c => c.category.includes("theme"));
+    } else if (filterId === "premium") {
+      filtered = cakes.filter(c => c.category.includes("premium"));
+    } else if (filterId === "chocolate") {
+      filtered = cakes.filter(c => c.category.includes("chocolate"));
+    } else if (filterId === "fusion") {
+      filtered = cakes.filter(c => c.category.includes("fusion"));
     }
 
     setFilteredCakes(filtered);

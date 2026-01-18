@@ -1,6 +1,6 @@
 // WhatsApp Integration
 export const generateWhatsAppMessage = (cartItems, total, deliveryDetails) => {
-  const bakeryNumber = "09993228538";
+  const bakeryNumber = "9993228538";
   
   let message = "🎂 *Mangalam Bakery Order* 🎂\n\n";
   message += "📋 *Order Items:*\n";
@@ -28,7 +28,7 @@ export const generateWhatsAppMessage = (cartItems, total, deliveryDetails) => {
 };
 
 export const openWhatsAppChat = (message) => {
-  const bakeryNumber = "09993228538";
+  const bakeryNumber = "919993228538";
   const encodedMessage = encodeURIComponent(message);
   const whatsappUrl = `https://wa.me/${bakeryNumber}?text=${encodedMessage}`;
   window.open(whatsappUrl, "_blank");

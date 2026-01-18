@@ -1,43 +1,103 @@
-# Getting Started with Create React App
+# 🎂 Mangalam Bakery - Premium E-Commerce Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, fully responsive React-based e-commerce website for **Mangalam Bakery**, a premium cake shop in Bhopal, India.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+### Core Features
+- **Product Catalog**: Browse 27+ premium cake varieties
+- **Custom Cake Builder**: Interactive step-by-step customization (flavour, weight, shape, photo, message)
+- **Shopping Cart**: Complete cart management
+- **WhatsApp Integration**: Direct order placement via WhatsApp
+- **Delivery Management**: Address, delivery type, time slots
 
-### `npm start`
+### Technical
+- React with React Router for navigation
+- Component-based architecture
+- Responsive design (mobile-first)
+- Smooth animations and transitions
+- No external styling libraries (custom CSS)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📁 Project Structure
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+src/
+├── components/
+│   ├── Header.js & Header.css
+│   ├── Footer.js & Footer.css
+│   └── ProductCard.js & ProductCard.css
+├── pages/
+│   ├── Home.js & Home.css
+│   ├── ProductListing.js & ProductListing.css
+│   ├── CustomCakeBuilder.js & CustomCakeBuilder.css
+│   └── ShoppingCart.js & ShoppingCart.css
+├── data/
+│   ├── cakes.js (27 cake products)
+│   └── businessInfo.js
+├── utils/
+│   ├── cartUtils.js
+│   └── whatsappUtils.js
+└── App.js & App.css
+```
 
-### `npm test`
+## 🛠️ Installation & Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
+```bash
+cd mangalam-bakery
+npm install
+```
 
-### `npm run build`
+### Run Development Server
+```bash
+npm start
+```
+Opens at `http://localhost:3000`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Production Build
+```bash
+npm run build
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📦 Dependencies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- `react` - UI library
+- `react-dom` - React DOM rendering
+- `react-router-dom` - Client-side routing
+- `react-scripts` - CRA build tools
 
-### `npm run eject`
+## 🎨 Business Details
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Mangalam Bakery**
+- 📍 Indrapuri, Bhopal (Outlet Location)
+- 🚚 Delivery: All of Bhopal city
+- 📞 +91 999 3228538
+- ⏰ Open till 12:00 AM daily
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🎂 Available Cakes (27 Varieties)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- White Forest (₹340)
+- Swiss Truffle (₹425)
+- Red Velvet (₹425)
+- Rasmalai (₹465)
+- And 23+ more!
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+All with multiple weight options available.
+
+## 🛒 How It Works
+
+1. **Browse Products** - Explore our cake collection
+2. **Build Custom Cake** - Use the interactive builder or select pre-made cakes
+3. **Add to Cart** - Customize quantity and preferences
+4. **Checkout** - Provide delivery details
+5. **WhatsApp Order** - Send order directly to +91 999 3228538
+
+## 🎨 Color Scheme
+
+- Primary: #c41e3a (Red)
+- Secondary: #a01830 (Dark Red)
+- Background: #fafafa (Light Gray)
+- Text: #333333 (Dark Gray)
 
 ## Learn More
 
