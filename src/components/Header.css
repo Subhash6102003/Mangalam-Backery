@@ -27,6 +27,7 @@
   gap: 12px;
   text-decoration: none;
   color: #b71f36;
+  min-width: -webkit-fit-content;
   min-width: fit-content;
 }
 

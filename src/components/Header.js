@@ -4,14 +4,7 @@ import { getCartItemsCount } from "../utils/cartUtils";
 import "./Header.css";
 
 const Header = ({ cartItems, selectedLocation }) => {
-  const [showMegaMenu, setShowMegaMenu] = useState(null);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
-
-  const cakesMenu = {
-    Cakes: ["Trending Cakes", "Eggless Cakes", "Photo Cakes", "Heart Shaped Cakes", "Half Kg / 1 Kg Cakes", "All Cakes"],
-    "Theme Cakes": ["Kids Cakes", "Cartoon Cakes", "Superhero Cakes", "Sports Cakes", "Designer Cakes"],
-    "By Relationship": ["Birthday", "Anniversary", "Occasions"],
-  };
 
   return (
     <header className="header">

@@ -1,7 +1,5 @@
 // WhatsApp Integration
 export const generateWhatsAppMessage = (cartItems, total, deliveryDetails) => {
-  const bakeryNumber = "9993228538";
-  
   let message = "🎂 *Mangalam Bakery Order* 🎂\n\n";
   message += "📋 *Order Items:*\n";
   

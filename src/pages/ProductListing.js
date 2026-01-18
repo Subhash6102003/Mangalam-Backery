@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
-import { cakes, cakeCategories } from "../data/cakes";
+import { cakes } from "../data/cakes";
 import ProductCard from "../components/ProductCard";
 import "./ProductListing.css";
 
