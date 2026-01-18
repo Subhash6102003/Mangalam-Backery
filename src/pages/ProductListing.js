@@ -12,14 +12,6 @@ const ProductListing = ({ cartDispatch }) => {
   const [selectedFilter, setSelectedFilter] = useState(categoryParam || "all");
   const [sortBy, setSortBy] = useState("trending");
 
-  // Filter cakes based on category parameter
-  useEffect(() => {
-    if (categoryParam) {
-      setSelectedFilter(categoryParam);
-      handleFilterChange(categoryParam);
-    }
-  }, [categoryParam]);
-
   const filters = [
     { id: "all", label: "All Cakes", count: cakes.length },
     { id: "theme", label: "Theme Cakes", count: cakes.filter(c => c.category.includes("theme")).length },
@@ -50,6 +42,14 @@ const ProductListing = ({ cartDispatch }) => {
 
     setFilteredCakes(filtered);
   };
+
+  // Filter cakes based on category parameter
+  useEffect(() => {
+    if (categoryParam) {
+      setSelectedFilter(categoryParam);
+      handleFilterChange(categoryParam);
+    }
+  }, [categoryParam]);
 
   const handleSortChange = (sortType) => {
     setSortBy(sortType);
